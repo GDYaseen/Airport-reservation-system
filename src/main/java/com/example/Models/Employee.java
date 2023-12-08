@@ -1,4 +1,5 @@
 package com.example.Models;
+
 public class Employee extends Person{
     private String password;
     private int loginAttempts;
