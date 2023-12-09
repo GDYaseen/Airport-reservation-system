@@ -3,6 +3,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 
 public class Main extends javafx.application.Application {
@@ -13,10 +15,12 @@ public class Main extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         mainApp=this;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 755, 505);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
         primaryStage=stage;
-        stage.setTitle("Union Airlines");
+        //stage.setTitle("Union Airlines");
+        stage.setResizable(false);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.show();
     }
